@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'milestone4.urls'
+ROOT_URLCONF = 'murder_mystery.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'milestone4.wsgi.application'
+WSGI_APPLICATION = 'murder_mystery.wsgi.application'
 
 
 # Database
