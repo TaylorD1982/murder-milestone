@@ -27,7 +27,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['9789e65bcf9840e8a867634f1b3a45a8.vfs.cloud9.us-east-1.amazonaws.com']
+ALLOWED_HOSTS = ['9789e65bcf9840e8a867634f1b3a45a8.vfs.cloud9.us-east-1.amazonaws.com',
+                    'stiletto-murder-mysteries.herokuapp.com']
 
 
 # Application definition
