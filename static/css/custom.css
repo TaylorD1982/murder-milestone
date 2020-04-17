@@ -1,3 +1,6 @@
+.body {
+    background-color: #f5f4ed;
+}
 
 .accountform {
     padding-top: 20px;
@@ -67,17 +70,97 @@ caption p {
     padding-bottom: 50px;
 }
 
-.col {
+.social-media {
+    text-align: center;
     background-color: black;
+    font-size: 1.5em;
+}
+
+.fa {
     color: white;
+    font-size: 1.5em;
+    padding-right: 20px;
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.product-name {
+    font-family: 'Italianno', cursive;
+    font-size: 4em;
+}
+
+.product-description {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.25em;
+}
+
+.box {
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+}
+
+.content-1 {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.banner {
+    background-color: #413D3C;
+}
+
+.form-group {
+    padding-right: 7px;
+}
+
+/*-------------------------contact page-------*/
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact-navbar {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1em;
+  float: right;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.contact-title {
+    font-family: 'Italianno', cursive;
+    font-size: 4em;
+    padding-bottom: 30px;
 }
 
 .contact-heading {
   font-family: 'Nanum Myeongjo', serif;
   font-size: 1.5em; 
+  color: #8B4513
 }
 
 .contact-content {
   font-family: 'Nanum Myeongjo', serif;
-  font-size: 1em; 
+  font-size: 1.3em;
+  padding-bottom: 30px;
+}
+
+.fa:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+  color:black;
+  text-decoration: none;
 }

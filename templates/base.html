@@ -15,35 +15,50 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_UbfQMZPiQGURDwMtv5SCI");
+        })();
+    </script>
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5336900852.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet"> {% block head_js %} {% endblock head_js %}
 </head>
 
-<body>
-
-    <div class="row">
-        <div class="col">
+<body class="body">
+    <div class="row banner">
+        <div class="col-6">
             <div>
-                <img width="100%" src="{% static 'images/banner-desktop.png' %}" alt="Stiletto Murder Mysteries">
+                <img width="100%" src="{% static 'images/banner-desktop-new.png' %}" alt="Stiletto Murder Mysteries">
             </div>
         </div>
-        <div class="col">
-            <div class="bet_time">
-                <p><i class="fas fa-phone contact-content">  01945 232300</i></p>
-                <p><i class="far fa-question-circle contact-content">  murder-mysteries@Gmail.com</i></p>
-                <div class="display">
-
-                            <a href="https://facebook.com" target="_blank" class="fa fa-facebook"></a>
-                            <a href="https://twitter.com" target="_blank" class="fa fa-twitter fa-large"></a>
-                            <a href="https://instagram.com" target="_blank" class="fa fa-instagram fa-large"></a>
-
-                    <form action="{% url 'search' %}" method="get">
-                        <input type="text" name="q">
-                        <button type="search">Search</button>
-                    </form>
-                </div>
+        <div class="col-6 box">
+            <div class="content-1">
+            <div>
+                <i class="fas fa-phone contact-navbar">&nbsp;&nbsp;01945 232300</i>
             </div>
+            <div>
+                <i class="far fa-question-circle contact-navbar">&nbsp;&nbsp;murder-mysteries@Gmail.com</i>
+            </div>
+            </div>
+            <div class="content">
+              <form class="form-inline" action="{% url 'search' %}" method="get">
+                 <div class="social media">
+                    <a href="https://facebook.com" target="_blank" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com" target="_blank" class="fa fa-twitter fa-large"></a>
+                    <a href="https://instagram.com" target="_blank" class="fa fa-instagram fa-large"></a>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="q">
+                </div>
+                  <button type="submit" class="btn btn-light btn-sm">Search</button>
+             </form>
+          </div>
+        </div>
         </div>
     </div>
 
@@ -103,12 +118,23 @@
         </div>
     </div>
     {% endif %}
-    <div class="container">
-        {% block content %} <img width="100%" src="{% static 'images/banner-desktop.png' %}" alt="Football League"> {% endblock %}
+    <div>
+        {% block content %} <img width="100%" src="{% static 'images/haunted-house-desktop.jpeg' %}" alt="Football League"> {% endblock %}
     </div>
     <footer>
-        <div class="container">
-            <img width="100%" src="{% static 'images/banner-desktop.png' %}" alt="Stiletto Murder Mysteries">
+        <div>
+            <div class="social-media">BOOKINGS & ENQUIRIES</div>
+            <div class="social-media">To make a general enquiry, enquire about an event, show or book a children’s party. Please contact us.</div>
+        </div>
+        <div>
+            <img width="100%" src="{% static 'images/footer-desktop.png' %}" alt="Stiletto Murder Mysteries">
+        </div>
+        <div class="social-media">
+            <container>
+            <a href="https://facebook.com" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://twitter.com" target="_blank" class="fa fa-twitter fa-large"></a>
+            <a href="https://instagram.com" target="_blank" class="fa fa-instagram fa-large"></a>
+            </container>
         </div>
     </footer>
 </body>
