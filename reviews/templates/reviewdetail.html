@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-10 col-md-9">
+            <h3>{{ review.title }}</h3>
+            <div class="row">
+                <div class="col-xs-9">
+                    <p>{{ review.content }}</p>
+                    <p><span class="boldtext">Published on:</span> {{ review.created_date }} </p>
+                    <a href="{% url 'get_reviews' %}" class="btn btn-default">Back</a>
+                    <a href="{% url 'edit_review' review.id %}" class="btn btn-default">Edit Review</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

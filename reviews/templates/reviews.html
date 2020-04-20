@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+
+
+{% block content %}
+
+<div>
+    <p><a href="{% url 'new_review' %}" class="btn btn-success">New Review</a></p>
+</div>
+
+<div class="container">
+    {% for review in reviews %}
+    <div>
+        <h3 class="contact-title">{{ review.title }}</h3>
+        <p class="contact-content">{{ review.content|truncatewords:30 }}</p>
+        <p><a href="{% url 'review_detail' review.id %}" class="btn btn-success">Read more</a></p>
+        <p><span class="boldtext">Score:</span> {{ review.rating }} </p>
+        <p><span class="boldtext">Published on:</span> {{ review.created_date }} </p>
+    </div>
+    <hr> {% endfor %}
+</div>
+{% endblock %}

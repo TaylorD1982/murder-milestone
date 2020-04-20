@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.views.static import serve
 from django.contrib import admin
 from accounts import urls as urls_accounts
 from products import urls as urls_products
@@ -21,6 +22,8 @@ from home import urls as urls_home
 from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout
+from blog import urls as urls_blog
+from reviews import urls as urls_review
 from home.views import index
 from django.views import static
 from .settings import MEDIA_ROOT
@@ -34,5 +37,7 @@ urlpatterns = [
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
     url(r'^search/', include(urls_search)),
+    url(r'^blog/', include(urls_blog)),
+    url(r'^reviews/', include(urls_review)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]

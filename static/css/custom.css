@@ -47,20 +47,8 @@ caption p {
 
 .navbar-nav {
   font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.5em;
-  line-height: 15px;
+  font-size: 1.1em;
  }
-
- .navbar-dark .navbar-nav .nav-link {
-  color: rgb(194, 194, 163);
- }
-
- .nav-item {
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 10px;
- }
-
 
 .bet_time {
     position:absolute;
@@ -73,7 +61,7 @@ caption p {
 .social-media {
     text-align: center;
     background-color: black;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .fa {
@@ -111,7 +99,7 @@ caption p {
 }
 
 .banner {
-    background-color: #413D3C;
+    background-color: #343A40;
 }
 
 .form-group {
@@ -124,7 +112,7 @@ caption p {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 50px;
     margin-right: auto;
     margin-left: auto;
@@ -164,3 +152,64 @@ caption p {
   color:black;
   text-decoration: none;
 }
+
+.bg-dark {
+    background-color: #413D3C!important;
+}
+
+/*-------------------------cart page-------*/
+
+.empty {
+    padding-top: 50px;
+}
+
+/*-------------------------Log In page-------*/
+
+.container1 {
+    padding-right: 155px;
+    padding-left: 155px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+}
+
+.home {
+    position: relative;
+}
+
+.messages {
+    position:absolute;
+    top:10px;
+    left: 10px;
+    z-index: 1;
+    background-color: #39e600;
+    font-family: 'Italianno', cursive;
+    font-size: 2em;
+    padding-bottom: 30px;
+    
+}
+
+
+.input-group {
+    margin-right: 10px;
+}
+
+.footer-booking-header {
+    font-family: 'Italianno', cursive;
+    font-size: 3em;
+    color: white;
+    padding-bottom: 30px;
+    background-color: #343A40;
+    text-align: center;
+}
+
+.footer-booking-content {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.1em;
+    color: white;
+    padding-bottom: 30px;
+    background-color: #343A40;
+    text-align: center;
+}
+
+

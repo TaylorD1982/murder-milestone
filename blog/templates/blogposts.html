@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    {% for post in blog %}
+        <div>
+            <h3 class="contact-title">{{ post.title }}</h3>
+            <p class="contact-content">{{ post.content|truncatewords:30 }}</p>
+            <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-success">Read more</a></p>
+            <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
+        </div>
+        <hr>
+    {% endfor %}
+</div>
+{% endblock %}

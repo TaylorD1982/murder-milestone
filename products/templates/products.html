@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {% block content %}
 
-<br>
 <div class="container">
     <br>
     {% for product in products %}
@@ -42,8 +41,8 @@
 
             <form method="post" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
-                <div class="input-group">
-                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+                <div class="input-group" style="width: 200px;">
+                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Tickets">
                     <span class="input-group-btn">
                             <button class="btn btn-success" type="submit">Add</button>
                         </span>

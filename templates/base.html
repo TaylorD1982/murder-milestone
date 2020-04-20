@@ -38,33 +38,24 @@
         </div>
         <div class="col-6 box">
             <div class="content-1">
-            <div>
-                <i class="fas fa-phone contact-navbar">&nbsp;&nbsp;01945 232300</i>
-            </div>
-            <div>
-                <i class="far fa-question-circle contact-navbar">&nbsp;&nbsp;murder-mysteries@Gmail.com</i>
-            </div>
+                <div>
+                    <i class="fas fa-phone contact-navbar">&nbsp;&nbsp;01945 232300</i>
+                </div>
+                <div>
+                    <i class="far fa-question-circle contact-navbar">&nbsp;&nbsp;murder-mysteries@Gmail.com</i>
+                </div>
             </div>
             <div class="content">
-              <form class="form-inline" action="{% url 'search' %}" method="get">
-                 <div class="social media">
-                    <a href="https://facebook.com" target="_blank" class="fa fa-facebook"></a>
-                    <a href="https://twitter.com" target="_blank" class="fa fa-twitter fa-large"></a>
-                    <a href="https://instagram.com" target="_blank" class="fa fa-instagram fa-large"></a>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="q">
-                </div>
-                  <button type="submit" class="btn btn-light btn-sm">Search</button>
-             </form>
-          </div>
-        </div>
+                <a href="https://facebook.com" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://twitter.com" target="_blank" class="fa fa-twitter fa-large"></a>
+                <a href="https://instagram.com" target="_blank" class="fa fa-instagram fa-large"></a>
+            </div>
         </div>
     </div>
 
     <!-- Fixed masthead -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -82,7 +73,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'get_posts' %}">Blog</a>
+                </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
+              <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" type="text" name="q">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
             <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
@@ -111,20 +109,18 @@
         </div>
     </nav>
 
-    {% if messages %}
-    <div class="alert alert-success">
-        <div class="messages">
-            {% for message in messages %} {{ message }} {% endfor %}
-        </div>
-    </div>
-    {% endif %}
-    <div>
+    <div = class="home">
         {% block content %} <img width="100%" src="{% static 'images/haunted-house-desktop.jpeg' %}" alt="Football League"> {% endblock %}
+        {% if messages %}
+                <div class="messages">
+                    {% for message in messages %} {{ message }} {% endfor %}
+                </div>
+        {% endif %}
     </div>
     <footer>
         <div>
-            <div class="social-media">BOOKINGS & ENQUIRIES</div>
-            <div class="social-media">To make a general enquiry, enquire about an event, show or book a children’s party. Please contact us.</div>
+            <div class="footer-booking-header">BOOKINGS & ENQUIRIES</div>
+            <div class="footer-booking-content">To make a general enquiry, enquire about an event, show or book a children’s party. Please contact us.</div>
         </div>
         <div>
             <img width="100%" src="{% static 'images/footer-desktop.png' %}" alt="Stiletto Murder Mysteries">
