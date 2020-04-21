@@ -42,7 +42,7 @@
                     <i class="fas fa-phone contact-navbar">&nbsp;&nbsp;01945 232300</i>
                 </div>
                 <div>
-                    <i class="far fa-question-circle contact-navbar">&nbsp;&nbsp;murder-mysteries@Gmail.com</i>
+                    <i class="far fa-question-circle contact-navbar">&nbsp;&nbsp;stilettomurder@gmail.com</i>
                 </div>
             </div>
             <div class="content">
@@ -68,18 +68,18 @@
                     <a class="nav-link" href="{% url 'products' %}">Murder Mysteries</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">About</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'get_posts' %}">Blog</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'get_reviews' %}">Reviews</a>
+                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
               <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" type="text" name="q">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
             </form>
             <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
@@ -110,27 +110,35 @@
     </nav>
 
     <div = class="home">
-        {% block content %} <img width="100%" src="{% static 'images/haunted-house-desktop.jpeg' %}" alt="Football League"> {% endblock %}
+        {% block content %} 
+        
+        <img width="100%" src="{% static 'images/haunted-house-desktop.jpeg' %}" alt="Football League"> 
+        
+          <div class="top-left">
+              <h1 class="home-text">Stiletto is the UK’s leading murder mystery events company</h1>
+              <p class="blog-content">Your Evening or Weekend Murder Mystery break will be filled with 
+              Intrigue, Suspicion and of course Murder! The Murder57 experience includes everything to 
+              make your break a memorably muderous one.</p>
+              <p class="blog-content">All events include overnight accommodation, 
+              a delicious 3 course meal including tea and coffee, interactive evening entertainment 
+              from professional actors and full breakfast the following morning. If you manage to 
+              guess the murderer and the correct murderous motive then you could be the evenings 
+              Super Sleuth, and receive a prestigious certificate plus some Murder 57 prizes.</p>
+          </div>
+
+        
+        {% endblock %}
         {% if messages %}
                 <div class="messages">
                     {% for message in messages %} {{ message }} {% endfor %}
                 </div>
         {% endif %}
+        
+        
     </div>
     <footer>
         <div>
-            <div class="footer-booking-header">BOOKINGS & ENQUIRIES</div>
-            <div class="footer-booking-content">To make a general enquiry, enquire about an event, show or book a children’s party. Please contact us.</div>
-        </div>
-        <div>
             <img width="100%" src="{% static 'images/footer-desktop.png' %}" alt="Stiletto Murder Mysteries">
-        </div>
-        <div class="social-media">
-            <container>
-            <a href="https://facebook.com" target="_blank" class="fa fa-facebook"></a>
-            <a href="https://twitter.com" target="_blank" class="fa fa-twitter fa-large"></a>
-            <a href="https://instagram.com" target="_blank" class="fa fa-instagram fa-large"></a>
-            </container>
         </div>
     </footer>
 </body>

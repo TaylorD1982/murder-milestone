@@ -47,7 +47,12 @@ caption p {
 
 .navbar-nav {
   font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.1em;
+  font-size: 1.25em;
+ }
+ 
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
  }
 
 .bet_time {
@@ -65,7 +70,7 @@ caption p {
 }
 
 .fa {
-    color: white;
+    color: #C7B299;
     font-size: 1.5em;
     padding-right: 20px;
     transition: transform .2s;
@@ -122,7 +127,7 @@ caption p {
   font-family: 'Nanum Myeongjo', serif;
   font-size: 1em;
   float: right;
-  color: white;
+  color: #C7B299;
   padding-top: 5px;
   padding-bottom: 10px;
 }
@@ -197,7 +202,7 @@ caption p {
 .footer-booking-header {
     font-family: 'Italianno', cursive;
     font-size: 3em;
-    color: white;
+    color: #C7B299;
     padding-bottom: 30px;
     background-color: #343A40;
     text-align: center;
@@ -206,10 +211,72 @@ caption p {
 .footer-booking-content {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 1.1em;
-    color: white;
+    color: #C7B299;
     padding-bottom: 30px;
     background-color: #343A40;
     text-align: center;
 }
 
+/*---------------Reviews page-------*/
 
+.post-review {
+    position:absolute;
+    top:20px;
+    right: 50px;
+}
+
+.review-title {
+    font-family: 'Italianno', cursive;
+    color: #8B4513;
+    font-size: 3em;
+}
+
+.review-content {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.3em;
+  padding-bottom: 1px;
+  padding-top: 10px;
+}
+
+.review-by {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1em;
+  padding-bottom: 1px;
+  padding-top: 10px;
+}
+
+/*---------------Blog page-------*/
+
+.blog-title {
+    font-family: 'Italianno', cursive;
+    color: #8B4513;
+    font-size: 3em;
+}
+
+.blog-content {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.3em;
+  padding-bottom: 1px;
+  padding-top: 10px;
+}
+
+.blog-info {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1em;
+  padding-bottom: 1px;
+  padding-top: 10px;
+}
+
+.top-left {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  max-width: 1000px;
+}
+
+.home-text {
+  font-family: 'Nanum Myeongjo', cursive;
+  color: #8B4513;
+  font-size: 2em;
+  padding-bottom: 35px;
+}

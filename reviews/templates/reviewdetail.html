@@ -1,17 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row">
-        <div class="col-sm-10 col-md-9">
-            <h3>{{ review.title }}</h3>
-            <div class="row">
-                <div class="col-xs-9">
-                    <p>{{ review.content }}</p>
-                    <p><span class="boldtext">Published on:</span> {{ review.created_date }} </p>
-                    <a href="{% url 'get_reviews' %}" class="btn btn-default">Back</a>
-                    <a href="{% url 'edit_review' review.id %}" class="btn btn-default">Edit Review</a>
-                    <hr>
-                </div>
+
+<div class="container">
+    <div>
+        <h3 class="review-title">{{ review.title }}</h3>
+        {% if review.rating == 5 %}
+            <p>5</p>
+        {% elif review.rating == 4 %}
+            <div>
+                ★ ★ ★ ★  ☆
             </div>
-        </div>
+        {% elif review.rating == 3 %}
+            <p>3</p>
+        {% elif review.rating == 2 %}
+            <div>
+               ★ ★ ☆ ☆ ☆
+            </div>
+        {% elif review.rating == 1 %}
+            <p>1</p>
+        {% endif %}
+        <p class="review-content">{{ review.content }}</p>
+        <p class="review-by">Review written by {{ user }} on {{ review.created_date }} </p>
+        <a href="{% url 'get_reviews' %}" class="btn btn-outline-dark">Back</a>
+        <a href="{% url 'edit_review' review.id %}" class="btn btn-outline-dark">Edit Review</a>
     </div>
+</div>
+
+
 {% endblock %}

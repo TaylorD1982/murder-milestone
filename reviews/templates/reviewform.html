@@ -1,10 +1,14 @@
-{% extends "base.html" %}
-{% load bootstrap_tags %}
-{% block content %}
-    <h1>New Post</h1>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form | as_bootstrap }}
-        <button type="submit" class="btn btn-info">Save</button>
-    </form>
+{% extends "base.html" %} {% load bootstrap_tags %} {% block content %}
+
+
+<div class="container">
+    <div>
+        <h1 class="review-title">Let us know what you think</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %} {{ form | as_bootstrap }}
+            <button type="submit" class="btn btn-info">Save</button>
+        </form>
+    </div>
+</div>
+
 {% endblock %}

@@ -9,10 +9,6 @@ def locations(request):
     """Return the locations.html file"""
     return render(request, "locations.html")
     
-def about(request):
-    """Return the about.html file"""
-    return render(request, "about.html")
-    
 def contact(request):
     """Return the contact.html file"""
     return render(request, "contact.html")
