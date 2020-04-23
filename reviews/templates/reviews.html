@@ -28,7 +28,9 @@
                ★ ★ ☆ ☆ ☆
             </div>
         {% elif review.rating == 1 %}
-            <p>1</p>
+            <div>
+               ★ ☆ ☆ ☆ ☆
+            </div>
         {% endif %}
         <p class="review-content">{{ review.content|truncatewords:30 }}</p>
         <p><a href="{% url 'review_detail' review.id %}" class="btn btn-outline-dark">Full Review</a></p>

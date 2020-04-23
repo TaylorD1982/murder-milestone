@@ -6,16 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Murder Mystery</title>
+    <title>Stiletto Murder Mysteries</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <link rel="icon" href="{% static 'images/icon.png' %}">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
@@ -31,13 +29,13 @@
 
 <body class="body">
     <div class="row banner">
-        <div class="col-6">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <div>
-                <img width="100%" src="{% static 'images/banner-desktop-new.png' %}" alt="Stiletto Murder Mysteries">
+                <img width="100%" src="{% static 'images/banner-desktop-blood.png' %}" alt="Stiletto Murder Mysteries">
             </div>
         </div>
-        <div class="col-6 box">
-            <div class="content-1">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 banner-icons mobileHide">
+            <div class="banner-contact">
                 <div>
                     <i class="fas fa-phone contact-navbar">&nbsp;&nbsp;01945 232300</i>
                 </div>
@@ -45,7 +43,7 @@
                     <i class="far fa-question-circle contact-navbar">&nbsp;&nbsp;stilettomurder@gmail.com</i>
                 </div>
             </div>
-            <div class="content">
+            <div class="banner-social-media">
                 <a href="https://facebook.com" target="_blank" class="fa fa-facebook"></a>
                 <a href="https://twitter.com" target="_blank" class="fa fa-twitter fa-large"></a>
                 <a href="https://instagram.com" target="_blank" class="fa fa-instagram fa-large"></a>
@@ -112,18 +110,18 @@
     <div = class="home">
         {% block content %} 
         
-        <img width="100%" src="{% static 'images/haunted-house-desktop.jpeg' %}" alt="Football League"> 
-        
+        <img width="100%" src="{% static 'images/haunted-house-desktop.jpeg' %}" alt="Football League" class="mobileHide"> 
+        <img width="100%" src="{% static 'images/haunted-house-mobile.png' %}" alt="Football League" class="mobileShow">
           <div class="top-left">
               <h1 class="home-text">Stiletto is the UK’s leading murder mystery events company</h1>
-              <p class="blog-content">Your Evening or Weekend Murder Mystery break will be filled with 
-              Intrigue, Suspicion and of course Murder! The Murder57 experience includes everything to 
+              <p class="home-content">Your Evening or Weekend Murder Mystery break will be filled with 
+              Intrigue, Suspicion and of course Murder! The Stiletto experience includes everything to 
               make your break a memorably muderous one.</p>
-              <p class="blog-content">All events include overnight accommodation, 
+              <p class="home-content">All events include overnight accommodation, 
               a delicious 3 course meal including tea and coffee, interactive evening entertainment 
               from professional actors and full breakfast the following morning. If you manage to 
               guess the murderer and the correct murderous motive then you could be the evenings 
-              Super Sleuth, and receive a prestigious certificate plus some Murder 57 prizes.</p>
+              Super Sleuth, and receive a prestigious certificate and prizes.</p>
           </div>
 
         
@@ -133,14 +131,17 @@
                     {% for message in messages %} {{ message }} {% endfor %}
                 </div>
         {% endif %}
-        
-        
     </div>
+
     <footer>
         <div>
             <img width="100%" src="{% static 'images/footer-desktop.png' %}" alt="Stiletto Murder Mysteries">
         </div>
     </footer>
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

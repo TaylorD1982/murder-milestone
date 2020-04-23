@@ -3,13 +3,13 @@
 <div class="container">
     <br>
     {% for product in products %}
-    <div class="row">
-        <div class="col-3">
+    <div class="row products">
+        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 product-image">
             <img width="100%" src="{{ MEDIA_URL }}{{ product.image }}" alt="Stiletto Murder Mysteries">
         </div>
-        <div class="col-9">
-            <h3 class="product-name">{{ product.name }}</h3>
-            <p class="product-description">{{ product.description }}</p> 
+        <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+            <h3 class="product-name mobileHide">{{ product.name }}</h3>
+            <p class="product-description">{{ product.description|truncatewords:40 }}</p> 
             <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal{{product.id}}">
               Event Details
             </button>
@@ -17,28 +17,43 @@
 
             <!-- Modal -->
             <div class="modal fade" id="modal{{product.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">{{ product.name }}</h5>
+                        <h5 class="modal-title product-name" id="exampleModalLabel">{{ product.name }}</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
                       </div>
                       <div class="modal-body">
-                        <p>{{ product.description }}</p>
-                        <p>{{ product.description2 }}</p>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <div class="container">
+                              <div class="row">
+                                <div class="col-4">
+                                  <img width="100%" src="{{ MEDIA_URL }}{{ product.image }}" alt="Stiletto Murder Mysteries">
+                                </div>
+                                <div class="col-8">
+                                  <p class="modal-description">{{ product.description }}</p>
+                                  <p class="modal-description">{{ product.description2 }}</p>
+                                </div>
+                              </div>
+                            </div>
                       </div>
                     </div>
                   </div>
             </div>
             <br>
             <br>
-            <p>Price Per Person: £{{ product.price }}</p>
-
+            <div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-5">
+                      <p><b>Time and Date:</b> {{ product.date }} at {{ product.time }}</p>
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <b>Address:</b> {{ product.address }}</p>
+                    </div>
+                </div>
+            </div>
+            <p><b>Price per Person:</b> £{{ product.price }}</p>
             <form method="post" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
                 <div class="input-group" style="width: 200px;">

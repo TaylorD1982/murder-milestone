@@ -2,46 +2,6 @@
     background-color: #f5f4ed;
 }
 
-.accountform {
-    padding-top: 20px;
-}
-
-.badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
-}
-
-.label-warning[href],
-.badge-warning[href] {
-    background-color: #c67605;
-}
-
-caption p {
-    word-wrap: break-word;
-}
-
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.panel-default {
-    border-color: transparent;
-    padding: 0 10px;
-}
-
-.panel-body {
-    height: 100%;
-    border: 1px solid #ddd;
-}
-
-.product-description {
-    min-height: 40px;
-}
 
 /*-------------------------Navigation Bar--------*/
 
@@ -54,31 +14,26 @@ caption p {
   padding-left: 10px;
   padding-right: 10px;
  }
-
-.bet_time {
-    position:absolute;
-    bottom:0;
-    right:0;
-    padding-right: 50px;
-    padding-bottom: 50px;
-}
-
-.social-media {
-    text-align: center;
-    background-color: black;
-    font-size: 1em;
-}
+ 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+ .navbar-nav {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1em;
+ }}
 
 .fa {
     color: #C7B299;
-    font-size: 1.5em;
+    font-size: 1em;
     padding-right: 20px;
     transition: transform .2s;
     margin: 0 auto;
 }
 
+/*-------------Products Page--------*/
+
 .product-name {
     font-family: 'Italianno', cursive;
+    color: #8a0303;
     font-size: 4em;
 }
 
@@ -87,17 +42,46 @@ caption p {
     font-size: 1.25em;
 }
 
-.box {
+.modal-description {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.1em;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.product-image {
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.product-description {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.1em;
+}}
+
+.products {
+    padding-top: 30px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.products {
+    padding-top: 5px;
+}}
+
+/*-------------Banner Formatting--------*/
+
+.banner-icons {
     position: relative;
 }
 
-.content {
+.banner-social-media {
     position: absolute;
     bottom: 10px;
     right: 50px;
 }
 
-.content-1 {
+.banner-contact {
     position: absolute;
     bottom: 50px;
     right: 50px;
@@ -105,22 +89,6 @@ caption p {
 
 .banner {
     background-color: #343A40;
-}
-
-.form-group {
-    padding-right: 7px;
-}
-
-/*-------------------------contact page-------*/
-
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 40px;
-    padding-bottom: 50px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .contact-navbar {
@@ -132,16 +100,31 @@ caption p {
   padding-bottom: 10px;
 }
 
+
+/*-------------------------contact page-------*/
+
+.form-group {
+    padding-right: 7px;
+}
+
 .contact-title {
     font-family: 'Italianno', cursive;
+    color: #8a0303;
     font-size: 4em;
     padding-bottom: 30px;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.contact-title {
+    font-family: 'Italianno', cursive;
+    font-size: 4em;
+    padding-bottom: 20px;
+}}
+
 .contact-heading {
   font-family: 'Nanum Myeongjo', serif;
   font-size: 1.5em; 
-  color: #8B4513
+  color: #8a0303
 }
 
 .contact-content {
@@ -150,16 +133,30 @@ caption p {
   padding-bottom: 30px;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.contact-content {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.3em;
+  padding-bottom: 10px;
+}}
+
+.contact-instruction {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.3em;
+  padding-bottom: 30px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.contact-instruction {
+  padding-top: 15px;
+}}
+
 .fa:hover {
   -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1); 
   color:black;
   text-decoration: none;
-}
-
-.bg-dark {
-    background-color: #413D3C!important;
 }
 
 /*-------------------------cart page-------*/
@@ -170,13 +167,15 @@ caption p {
 
 /*-------------------------Log In page-------*/
 
-.container1 {
+.login-form {
     padding-right: 155px;
     padding-left: 155px;
     padding-top: 40px;
     padding-bottom: 50px;
 
 }
+
+/*---------Landing page formatting-------*/
 
 .home {
     position: relative;
@@ -194,28 +193,63 @@ caption p {
     
 }
 
-
 .input-group {
     margin-right: 10px;
 }
 
-.footer-booking-header {
-    font-family: 'Italianno', cursive;
-    font-size: 3em;
-    color: #C7B299;
-    padding-bottom: 30px;
-    background-color: #343A40;
-    text-align: center;
+.top-left {
+  position: absolute;
+  top: 80px;
+  left: 30px;
 }
 
-.footer-booking-content {
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 1.1em;
-    color: #C7B299;
-    padding-bottom: 30px;
-    background-color: #343A40;
-    text-align: center;
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.top-left {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}}
+
+.home-text {
+  font-family: 'Nanum Myeongjo', cursive;
+  color: #8a0303;
+  font-size: 2em;
+  padding-bottom: 35px;
 }
+
+@media only screen and (min-device-width: 401px) and (max-device-width: 1000px) {
+.home-text {
+  font-family: 'Nanum Myeongjo', cursive;
+  color: #8a0303;
+  font-size: 2em;
+  padding-bottom: 35px;
+  width: 75%;
+}}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 400px) {
+.home-text {
+  font-family: 'Nanum Myeongjo', cursive;
+  color: #8a0303;
+  font-size: 2em;
+  padding-bottom: 35px;
+  width: 65%;
+}}
+
+.home-content {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.3em;
+  padding-bottom: 1px;
+  padding-top: 10px;
+  width: 60%;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.home-content {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1em;
+  padding-bottom: 1px;
+  padding-top: 10px;
+}}
 
 /*---------------Reviews page-------*/
 
@@ -225,9 +259,16 @@ caption p {
     right: 50px;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.post-review {
+    position:absolute;
+    top: 5px;
+    right: 8px;
+}}
+
 .review-title {
     font-family: 'Italianno', cursive;
-    color: #8B4513;
+    color: #8a0303;
     font-size: 3em;
 }
 
@@ -249,7 +290,7 @@ caption p {
 
 .blog-title {
     font-family: 'Italianno', cursive;
-    color: #8B4513;
+    color: #8a0303;
     font-size: 3em;
 }
 
@@ -267,16 +308,34 @@ caption p {
   padding-top: 10px;
 }
 
-.top-left {
-  position: absolute;
-  top: 80px;
-  left: 30px;
-  max-width: 1000px;
+/*---------------Hiding and resizing on different screen sizes-------*/
+
+ .mobileShow {
+  display: none;
+ }
+
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  .mobileShow {
+   display: inline;
+  }
+ }
+
+ .mobileHide {
+  display: inline;
+ }
+
+ @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+  .mobileHide {
+   display: none;
+  }
+ }
+
+.modal-header {
+    padding-bottom: 0px;
+    border-bottom: white;
 }
 
-.home-text {
-  font-family: 'Nanum Myeongjo', cursive;
-  color: #8B4513;
-  font-size: 2em;
-  padding-bottom: 35px;
+.modal-title {
+    text-align: center;
 }
+
