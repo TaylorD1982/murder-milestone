@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="container">
-    <div>
+    <div class="review-box">
         <h3 class="review-title">{{ review.title }}</h3>
         {% if review.rating == 5 %}
             <p>5</p>
@@ -23,6 +23,7 @@
         <p class="review-by">Review written by {{ user }} on {{ review.created_date }} </p>
         <a href="{% url 'get_reviews' %}" class="btn btn-outline-dark">Back</a>
         <a href="{% url 'edit_review' review.id %}" class="btn btn-outline-dark">Edit Review</a>
+        <hr>
     </div>
 </div>
 

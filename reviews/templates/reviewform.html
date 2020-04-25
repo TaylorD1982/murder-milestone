@@ -2,11 +2,11 @@
 
 
 <div class="container">
-    <div>
+    <div class="review-box">
         <h1 class="review-title">Let us know what you think</h1>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %} {{ form | as_bootstrap }}
-            <button type="submit" class="btn btn-info">Save</button>
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
         </form>
     </div>
 </div>

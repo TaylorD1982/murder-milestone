@@ -1,11 +1,12 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="container">
-            <h3 class="blog-title">{{ post.title }}</h3>
-            <p class="blog-content">{{ post.content }}</p>
-            <p class="blog-info">Published on: {{ post.published_date }} </p>
+    <div class="blog">
+        <h3 class="blog-title">{{ post.title }}</h3>
+        <p class="blog-content">{{ post.content }}</p>
+        <p class="blog-info">Published on: {{ post.published_date }} </p>
 
-            <a href="{% url 'get_posts' %}" class="btn btn-outline-dark">Return to Blogs page</a>
-            <hr>
+        <a href="{% url 'get_posts' %}" class="btn btn-outline-dark">Return to Blogs page</a>
+        <hr>
+    </div>
 </div>
 {% endblock %}

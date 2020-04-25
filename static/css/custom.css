@@ -24,9 +24,20 @@
 .fa {
     color: #C7B299;
     font-size: 1em;
-    padding-right: 20px;
     transition: transform .2s;
     margin: 0 auto;
+}
+
+.search-box {
+    width: 230px;
+}
+
+.btn {
+    margin-left: 10px;
+}
+
+.btn-outline-dark {
+    margin-left: 0px;
 }
 
 /*-------------Products Page--------*/
@@ -103,6 +114,16 @@
 
 /*-------------------------contact page-------*/
 
+.contact {
+    padding-top: 50px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.contact {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}}
+
 .form-group {
     padding-right: 7px;
 }
@@ -164,6 +185,16 @@
 .empty {
     padding-top: 50px;
 }
+
+.cart {
+    padding-top: 50px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.cart {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}}
 
 /*-------------------------Log In page-------*/
 
@@ -253,6 +284,17 @@
 
 /*---------------Reviews page-------*/
 
+.review-box {
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.review-box {
+    padding-top: 55px;
+    padding-bottom: 15px;
+}}
+
 .post-review {
     position:absolute;
     top:20px;
@@ -287,6 +329,16 @@
 }
 
 /*---------------Blog page-------*/
+
+.blog {
+    padding-top: 50px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.blog {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}}
 
 .blog-title {
     font-family: 'Italianno', cursive;
@@ -339,3 +391,50 @@
     text-align: center;
 }
 
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.page{
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+
+/*---------------Checkout-------*/
+
+.checkout {
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
+.checkout {
+    padding-top: 55px;
+    padding-bottom: 15px;
+}}
+
+.checkout-title {
+    color: #8a0303;
+    font-family: 'Italianno', cursive;
+    font-size: 3em;
+}
+
+.checkout-details {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.5em;
+}
+
+.checkout-container {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.checkout-form {
+    margin-bottom: 0px;
+}

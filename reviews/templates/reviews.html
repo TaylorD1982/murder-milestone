@@ -1,42 +1,38 @@
-{% extends 'base.html' %} 
-
-
-{% block content %}
-
-{% if user.is_authenticated %}
-    <div class="post-review">
-        <p><a href="{% url 'new_review' %}" class="btn btn-outline-dark">+ Write a Review</a></p>
-    </div>
-{% else %}
-{% endif %}
+{% extends 'base.html' %} {% block content %} {% if user.is_authenticated %}
+<div class="post-review">
+    <p><a href="{% url 'new_review' %}" class="btn btn-outline-dark">+ Write a Review</a></p>
+</div>
+{% else %} {% endif %}
 
 
 <div class="container">
-    {% for review in reviews %}
-    <div>
-        <h3 class="review-title">{{ review.title }}</h3>
-        {% if review.rating == 5 %}
+    <div class="review-box">
+        {% for review in reviews %}
+        <div class="reviews">
+            <h3 class="review-title">{{ review.title }}</h3>
+            {% if review.rating == 5 %}
             <p>5</p>
-        {% elif review.rating == 4 %}
+            {% elif review.rating == 4 %}
             <div>
-                ★ ★ ★ ★  ☆
+                ★ ★ ★ ★ ☆
             </div>
-        {% elif review.rating == 3 %}
+            {% elif review.rating == 3 %}
             <p>3</p>
-        {% elif review.rating == 2 %}
+            {% elif review.rating == 2 %}
             <div>
-               ★ ★ ☆ ☆ ☆
+                ★ ★ ☆ ☆ ☆
             </div>
-        {% elif review.rating == 1 %}
+            {% elif review.rating == 1 %}
             <div>
-               ★ ☆ ☆ ☆ ☆
+                ★ ☆ ☆ ☆ ☆
             </div>
-        {% endif %}
-        <p class="review-content">{{ review.content|truncatewords:30 }}</p>
-        <p><a href="{% url 'review_detail' review.id %}" class="btn btn-outline-dark">Full Review</a></p>
-        
-        <p class="review-by">Review written by {{ user }} on {{ review.created_date }} </p>
+            {% endif %}
+            <p class="review-content">{{ review.content|truncatewords:30 }}</p>
+            <p><a href="{% url 'review_detail' review.id %}" class="btn btn-outline-dark">Full Review</a></p>
+
+            <p class="review-by">Review written by {{ user }} on {{ review.created_date }} </p>
+            <hr>
+        </div>{% endfor %}
     </div>
-    <hr> {% endfor %}
 </div>
 {% endblock %}

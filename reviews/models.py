@@ -15,18 +15,20 @@ class Review(models.Model):
     )
     
     EVENT_CHOICES = (
-        (1, 'Spectre in the Ballroom'),
-        (2, 'The Hunting Party'),
-        (3, 'The Corpse in the Drawing Room'),
-        (4, 'A Time to Kill'),
-        (5, 'The Casino Killing'),
+        ('1', 'Spectre in the Ballroom'),
+        ('2', 'The Hunting Party'),
+        ('3', 'The Corpse in the Drawing Room'),
+        ('4', 'A Time to Kill'),
+        ('5', 'The Casino Killing'),
     )
     
     title = models.CharField(max_length=200)
     content = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     rating = models.SmallIntegerField(choices=RATING_CHOICES)
-    event = models.TextField(default='', choices=EVENT_CHOICES)
+    event = models.CharField(max_length = 20, choices = EVENT_CHOICES, default = '1'
+        )
+    
     
 
     def __unicode__(self):

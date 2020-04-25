@@ -28,6 +28,7 @@
 </head>
 
 <body class="body">
+    <div class="page">
     <div class="row banner">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <div>
@@ -76,7 +77,7 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
-              <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" type="text" name="q">
+              <input class="form-control search-box mr-sm-2" placeholder="Search" aria-label="Search" type="text" name="q">
               <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
             </form>
             <ul class="navbar-nav ml-auto">
@@ -98,9 +99,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'view_cart' %}">
                         <i class="fa fa-shipping-cart"></i>Cart
-                            {% if product_count > 0 %}
-                            <label class="badge badge-warning">{{ product_count }}</label>
-                            {% endif %}
+                        {% if product_count > 0 %}
+                        <label class="badge badge-warning">{{ product_count }}</label>
+                        {% endif %}
                     </a>
                 </li>
             </ul>
@@ -113,11 +114,10 @@
         <img width="100%" src="{% static 'images/haunted-house-desktop.jpeg' %}" alt="Football League" class="mobileHide"> 
         <img width="100%" src="{% static 'images/haunted-house-mobile.png' %}" alt="Football League" class="mobileShow">
           <div class="top-left">
-              <h1 class="home-text">Stiletto is the UK’s leading murder mystery events company</h1>
-              <p class="home-content">Your Evening or Weekend Murder Mystery break will be filled with 
-              Intrigue, Suspicion and of course Murder! The Stiletto experience includes everything to 
+              <h1 class="home-text">Stiletto is Scotland’s leading murder mystery events organizer.</h1>
+              <p class="home-content">The Stiletto experience includes everything to 
               make your break a memorably muderous one.</p>
-              <p class="home-content">All events include overnight accommodation, 
+              <p class="home-content">All events include overnight accommodation in a first class hotel, 
               a delicious 3 course meal including tea and coffee, interactive evening entertainment 
               from professional actors and full breakfast the following morning. If you manage to 
               guess the murderer and the correct murderous motive then you could be the evenings 
@@ -132,8 +132,8 @@
                 </div>
         {% endif %}
     </div>
-
-    <footer>
+    </div>
+    <footer class="footer">
         <div>
             <img width="100%" src="{% static 'images/footer-desktop.png' %}" alt="Stiletto Murder Mysteries">
         </div>
