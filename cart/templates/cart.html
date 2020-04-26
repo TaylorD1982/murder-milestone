@@ -2,64 +2,39 @@
 <div class="container">
     <div class="cart">
         {% if cart_items %} {% for item in cart_items %}
-        <h3 class="contact-title">{{ item.product.name }}</h3>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th scope="col">Price per guest</th>
-                    <th scope="col">Number of tickets</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="row">{{ item.product.price }}</td>
-                    <td>
-                        <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                            {% csrf_token %}
-                            <div class="form-group">
-                                <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                                <div class="input-group">
-                                    <div class="input-group-addon">{{item.quantity}}</div>
-                                    <input name="quantity" type="number" min="0" max="999" class="form-control">
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-
-
-
-
-
         <div>
             <div>
-                <h3 class="contact-title">{{ item.product.name }}</h3>
-                <p class="contact-content">The price for each guest is £{{ item.product.price }}</p>
-                <p>
+                <h3 class="cart-title">Details of your purchase:</h3>
 
-                    <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                            <div class="input-group">
-                                <div class="input-group-addon">Number of Tickets =</div>
-                                <div class="input-group-addon">{{item.quantity}}</div>
-                                <input name="quantity" type="number" min="0" max="999" class="form-control">
-                            </div>
+                <div class="cart-details"><b>Event:</b></div>
+                <div class="cart-details">{{ item.product.name }}</div>
+                <br>
+                <div class="cart-details"><b>Event Details:</b></div>
+                <div class="cart-details">{{ item.product.description }}</div>
+                <br>
+                <div class="cart-details"><b>Price per Ticket:</b></div>
+                <div class="cart-details">£{{ item.product.price }}</div>
+                <br>
+                <div class="cart-details"><b>Number of Tickets:</b></div>
+                <div class="cart-details">{{ item.quantity }}</div>
+                <br>
+                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                        <div class="input-group">
+                            <input name="quantity" type="number" min="0" max="999" class="form-control">
                         </div>
-                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                    </form>
-                </p>
+                    </div>
+                    <button type="submit" class="btn btn-outline-dark"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend Quantity</button>
+                </form>
+                <hr>
             </div>
         </div>
         {% endfor %} {% else %}
         <div class="container">
-            <h1 class="contact-title">Your basket is empty</h1>
-            <p class="contact-content">Visit the Murder Mysteries page to view our upcoming events</p>
+            <h1 class="cart-title">Your basket is empty</h1>
+            <p class="cart-details">Visit the Murder Mysteries page to view our upcoming events</p>
         </div>
         {% endif %}
     </div>
@@ -67,8 +42,9 @@
 
 {% if cart_items %}
 <div class="container">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-</div>
-{% else %} {% endif %} {% endblock %}
+    <div class="checkout-details"><b>Total Cost of your Order:</b></div>
+    <div class="checkout-details">£{{ total }}</div>
+    <br>
+    <a href="{% url 'checkout' %}" class="btn btn-outline-dark" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+    <br>
+</div><br> {% else %} {% endif %} {% endblock %}

@@ -10,32 +10,40 @@
 <div class="checkout-container">
     {% for item in cart_items %}
     <div class="row checkout">
-        <div class="col-4">
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
             <div>
                 <h3 class="checkout-title">Details of your purchase:</h3>
                 <br>
-                <div class="checkout-details">Event:&nbsp;&nbsp;&nbsp;&nbsp;{{ item.product.name }}</div>
-                <div class="checkout-details">Tickets:&nbsp;&nbsp;&nbsp;&nbsp;{{ item.quantity }}</div>
-                <div class="checkout-details">Cost Per Ticket:&nbsp;&nbsp;&nbsp;&nbsp;{{ item.product.price }}</div>
+                <div class="checkout-details"><b>Event:</b></div>
+                <div class="checkout-details">{{ item.product.name }}</div>
+                <br>
+                <div class="checkout-details"><b>Number of Tickets:</b></div>
+                <div class="checkout-details">{{ item.quantity }}</div>
+                <br>
+                <div class="checkout-details"><b>Price per Ticket:</b></div>
+                <div class="checkout-details">£{{ item.product.price }}</div>
             </div>
             {% endfor %}
             <div>
-                <div class="checkout-details">Total:&nbsp;&nbsp;&nbsp;&nbsp;{{ total }}</div>
+                <hr>
+                <div class="checkout-details"><b>Total Cost of your Order:</b></div>
+                <div class="checkout-details">£{{ total }}</div>
             </div>
+            <hr>
         </div>
-        <div class="col-8">
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
             <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
-                <legend class="checkout-title">Payment Details</legend>
+                <legend class="checkout-payment">Payment Details</legend>
 
                 <div id="credit-card-errors" style="display: none;">
                     <div id="alert-message block-message error" id="stripe-error-message"></div>
                 </div>
                 <div class="row">
-                <div class="form-group checkout-form col-6">
+                <div class="form-group checkout-form col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     {{ order_form | as_bootstrap }}
                 </div>
 
-                <div class="form-group checkout-form col-6">
+                <div class="form-group checkout-form col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     {{ payment_form | as_bootstrap }}
                 </div>
                 </div>

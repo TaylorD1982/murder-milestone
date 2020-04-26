@@ -11,20 +11,26 @@
         <div class="reviews">
             <h3 class="review-title">{{ review.title }}</h3>
             {% if review.rating == 5 %}
-            <p>5</p>
+            <div>
+                <p class="stars">
+                ★ ★ ★ ★ ★    
+                </p>
+            </div>
             {% elif review.rating == 4 %}
             <div>
-                ★ ★ ★ ★ ☆
+                <p class="stars">★ ★ ★ ★ ☆</p>
             </div>
             {% elif review.rating == 3 %}
-            <p>3</p>
+            <div>
+                <p class="stars">★ ★ ★ ☆ ☆  </p>
+            </div>
             {% elif review.rating == 2 %}
             <div>
-                ★ ★ ☆ ☆ ☆
+                <p class="stars">★ ★ ☆ ☆ ☆</p>
             </div>
             {% elif review.rating == 1 %}
             <div>
-                ★ ☆ ☆ ☆ ☆
+                <p class="stars">★ ☆ ☆ ☆ ☆</p>
             </div>
             {% endif %}
             <p class="review-content">{{ review.content|truncatewords:30 }}</p>
