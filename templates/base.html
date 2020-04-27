@@ -57,7 +57,7 @@
 
         <!-- Fixed masthead -->
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
             <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -101,7 +101,7 @@
                     {% endif %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'view_cart' %}">
-                        <i class="fa fa-shipping-cart"></i>Cart
+                        Cart
                         {% if product_count > 0 %}
                         <label class="badge badge-warning">{{ product_count }}</label>
                         {% endif %}
@@ -118,16 +118,19 @@
         <div class="home">
             {% block content %}
 
-            <img width="100%" src="{% static 'images/home-page-desktop.png' %}" alt="Football League" class="mobileHide">
-            <img width="100%" src="{% static 'images/home-page-mobile.png' %}" alt="Football League" class="mobileShow">
+            <img width="100%" src="{% static 'images/home-page-desktop.png' %}" alt="Stiletto" class="mobileHide">
+            <img width="100%" src="{% static 'images/home-page-mobile.png' %}" alt="Stiletto" class="mobileShow">
 
 
             {% endblock %}
     </div>
     </div>
     <footer class="footer">
-        <div>
+        <div class="mobileHide">
             <img width="100%" src="{% static 'images/footer-desktop.png' %}" alt="Stiletto Murder Mysteries">
+        </div>
+        <div class="mobileShow">
+            <img width="100%" src="{% static 'images/footer-mobile.png' %}" alt="Stiletto Murder Mysteries">
         </div>
     </footer>
 

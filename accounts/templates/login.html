@@ -2,16 +2,12 @@
 
 {% load bootstrap_tags %} 
 
-{% block page_title %}Login Page{% endblock %} 
-
-{% block page_heading %}Home{% endblock %} 
-
 {% block content %}
 
 <!-- User logs in via Bootstrap Form -->
 
 <div class="container">
-    <div class="login-form login-box">
+    <div class="login-form">
         
         <h2 class="login-title">Log in by entering your details below</h2>
         
@@ -23,7 +19,7 @@
         
         <!-- Button to allow user to request instructionns to reset their password -->
         
-        <h2 class="login-forgot">Forgotten you password? No problem, just click below to request a reset</h2>
+        <h2 class="login-forgot">Forgotten you password?</h2>
         
         <p>
             <a href="{% url 'password_reset' %}" class="btn btn-outline-dark">Reset Password</a>

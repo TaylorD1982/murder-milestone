@@ -42,8 +42,8 @@
 
 {% if cart_items %}
 <div class="container">
-    <div class="checkout-details"><b>Total Cost of your Order:</b></div>
-    <div class="checkout-details">£{{ total }}</div>
+    <div class="cart-details"><b>Total Cost of your Order:</b></div>
+    <div class="cart-details">£{{ total }}</div>
     <br>
     <a href="{% url 'checkout' %}" class="btn btn-outline-dark" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
     <br>

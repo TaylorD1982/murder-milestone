@@ -1,25 +1,86 @@
+/*-------------------------GENERAL STYLING--------*/
+
 .body {
     background-color: #f5f4ed;
 }
 
+.form-group {
+    padding-right: 7px;
+}
 
-/*-------------------------Navigation Bar--------*/
+.home {
+    position: relative;
+}
+
+/*-------------buttons--------*/
+
+.btn {
+    margin-left: 10px;
+}
+
+.btn-outline-dark {
+    margin-left: 0px;
+}
+
+/*---------------Hiding and resizing on different screen sizes-------*/
+
+.mobileShow {
+    display: none;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .mobileShow {
+        display: inline;
+    }
+}
+
+.mobileHide {
+    display: inline;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .mobileHide {
+        display: none;
+    }
+}
+
+/*---------------Below styling makes footer stick to the foot of the page-------*/
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+/*-------------------------NAVIGATION BAR--------*/
 
 .navbar-nav {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.25em;
- }
- 
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.25em;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .navbar-nav {
+        font-size: 1.5em;
+    }
+}
+
 .nav-item {
-  padding-left: 10px;
-  padding-right: 10px;
- }
- 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
- .navbar-nav {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1em;
- }}
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 .fa {
     color: #C7B299;
@@ -32,15 +93,16 @@
     width: 230px;
 }
 
-.btn {
-    margin-left: 10px;
+.alert {
+    margin-bottom: 0rem;
 }
 
-.btn-outline-dark {
-    margin-left: 0px;
+.badge-warning {
+    color: #DCDCDC;
+    background-color: #8a0303;
 }
 
-/*-------------Products Page--------*/
+/*-------------MURDER MYSTERIES--------*/
 
 .product-name {
     font-family: 'Italianno', cursive;
@@ -53,34 +115,51 @@
     font-size: 1.25em;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .product-description {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .product-image {
+        padding-bottom: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+/*-------------Murder Mysteries Modals--------*/
+
+.modal-header {
+    padding-bottom: 0px;
+    border-bottom: white;
+    text-align: center;
+    display: block;
+}
+
+.modal-title {
+    text-align: center;
+}
+
 .modal-description {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 1.1em;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.product-image {
-    padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-}}
-
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.product-description {
-    font-family: 'Nanum Myeongjo', serif;
-    font-size: 1.1em;
-}}
+/*-------------Padding at top of Murder Mysteries page on different screen sizes--------*/
 
 .products {
     padding-top: 30px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.products {
-    padding-top: 5px;
-}}
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .products {
+        padding-top: 5px;
+    }
+}
 
-/*-------------Banner Formatting--------*/
+/*-------------BANNER--------*/
 
 .banner-icons {
     position: relative;
@@ -103,31 +182,29 @@
 }
 
 .contact-navbar {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1em;
-  float: right;
-  color: #C7B299;
-  padding-top: 5px;
-  padding-bottom: 10px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1em;
+    float: right;
+    color: #C7B299;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 
-/*-------------------------contact page-------*/
+/*-------------------------CONTACT PAGE------*/
+
+/*-------------------------Padding at top and bottom of page on different screen sizes-------*/
 
 .contact {
     padding-top: 50px;
     padding-bottom: 15px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.contact {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}}
-
-.form-group {
-    padding-right: 7px;
-
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .contact {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
 .contact-title {
@@ -137,96 +214,101 @@
     padding-bottom: 20px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.contact-title {
-    font-family: 'Italianno', cursive;
-    font-size: 4em;
-    padding-bottom: 20px;
-}}
-
 .contact-heading {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.5em; 
-  color: #8a0303
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.5em;
+    color: #8a0303
 }
 
 .contact-content {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.3em;
-  padding-bottom: 30px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.3em;
+    padding-bottom: 30px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.contact-content {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.3em;
-  padding-bottom: 10px;
-}}
-
-.contact-instruction {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.3em;
-  padding-bottom: 30px;
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .contact-content {
+        padding-bottom: 10px;
+    }
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
 .contact-instruction {
-  padding-top: 15px;
-}}
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.3em;
+    padding-bottom: 30px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .contact-instruction {
+        padding-top: 15px;
+    }
+}
 
 .fa:hover {
-  -ms-transform: scale(1.1); /* IE 9 */
-  -webkit-transform: scale(1.1); /* Safari 3-8 */
-  transform: scale(1.1); 
-  color:black;
-  text-decoration: none;
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+    color: black;
+    text-decoration: none;
 }
 
-/*-------------------------cart page-------*/
+/*-----------------CART-------*/
 
-.empty {
-    padding-top: 50px;
-}
+/*--------Padding at top and bottom of page on different screen sizes-------*/
 
 .cart {
     padding-top: 50px;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .cart {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
 
-
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.cart {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}}
-
-.cart-details{
+.cart-details {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 1.3em;
     padding-bottom: 10px;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .cart-details {
+        font-size: 1em;
+    }
+}
+
 .cart-title {
     font-family: 'Italianno', cursive;
     color: #8a0303;
     font-size: 4em;
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.cart-title {
-    padding-top: 15px;
-    font-size: 3em;
-}}
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .cart-title {
+        padding-top: 15px;
+        padding-bottom: 0px;
+        font-size: 3em;
+    }
+}
 
-
-/*-------------------------Log In page-------*/
+/*----------LOG IN PAGE-------*/
 
 .login-title {
     font-family: 'Italianno', cursive;
     color: #8a0303;
     font-size: 3em;
     padding-bottom: 20px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .login-title {
+        font-size: 2em;
+    }
 }
 
 .login-forgot {
@@ -237,122 +319,54 @@
     padding-top: 30px;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .login-forgot {
+        font-size: 2em;
+    }
+}
+
 .login-form {
     padding-right: 155px;
     padding-left: 155px;
     padding-top: 50px;
     padding-bottom: 100px;
-
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.login-form {
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 50px;
-    padding-bottom: 15px;
-}}
-
-/*---------Landing page formatting-------*/
-
-.home {
-    position: relative;
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .login-form {
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
 }
 
-.messages {
-    position:absolute;
-    top:10px;
-    left: 10px;
-    z-index: 1;
-    background-color: #39e600;
-    font-family: 'Italianno', cursive;
-    font-size: 2em;
-    padding-bottom: 30px;
-    
-}
-
-.input-group {
-    margin-right: 10px;
-}
-
-.top-left {
-  position: absolute;
-  top: 80px;
-  left: 30px;
-}
-
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.top-left {
-  position: absolute;
-  top: 25px;
-  left: 30px;
-}}
-
-.home-text {
-  font-family: 'Italianno', cursive;
-  color: #8a0303;
-  font-size: 3.5em;
-}
-
-@media only screen and (min-device-width: 401px) and (max-device-width: 1000px) {
-.home-text {
-  font-family: 'Nanum Myeongjo', cursive;
-  color: #8a0303;
-  font-size: 2em;
-  padding-bottom: 35px;
-  width: 75%;
-}}
-
-@media only screen and (min-device-width: 0px) and (max-device-width: 400px) {
-.home-text {
-  font-family: 'Nanum Myeongjo', cursive;
-  color: #8a0303;
-  font-size: 2em;
-  padding-bottom: 35px;
-  width: 65%;
-}}
-
-.home-content {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.3em;
-  padding-bottom: 1px;
-  padding-top: 10px;
-  width: 60%;
-}
-
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.home-content {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1em;
-  padding-bottom: 1px;
-  padding-top: 10px;
-}}
-
-/*---------------Reviews page-------*/
+/*------------REVIEWS-------*/
 
 .review-box {
     padding-top: 50px;
     padding-bottom: 15px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.review-box {
-    padding-top: 55px;
-    padding-bottom: 15px;
-}}
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .review-box {
+        padding-top: 55px;
+        padding-bottom: 15px;
+    }
+}
 
 .post-review {
-    position:absolute;
-    top:20px;
+    position: absolute;
+    top: 20px;
     right: 50px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.post-review {
-    position:absolute;
-    top: 5px;
-    right: 8px;
-}}
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .post-review {
+        position: absolute;
+        top: 5px;
+        right: 8px;
+    }
+}
 
 .review-title {
     font-family: 'Italianno', cursive;
@@ -360,31 +374,52 @@
     font-size: 3em;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .review-title {
+        font-size: 2.5em;
+        padding-bottom: 0px;
+    }
+}
+
 .review-content {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.3em;
-  padding-bottom: 1px;
-  padding-top: 10px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.3em;
+    padding-bottom: 1px;
+    padding-top: 10px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .review-content {
+        font-size: 1em;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
 }
 
 .review-by {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1em;
-  padding-bottom: 1px;
-  padding-top: 10px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1em;
+    padding-bottom: 1px;
+    padding-top: 10px;
 }
 
-/*---------------Blog page-------*/
+.stars {
+    color: #DAA520;
+    font-size: 1.3em;
+}
+
+/*---------------BLOG-------*/
 
 .blog {
     padding-top: 50px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.blog {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}}
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .blog {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
 
 .blog-title {
     font-family: 'Italianno', cursive;
@@ -392,63 +427,32 @@
     font-size: 3em;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .blog-title {
+        font-size: 2.5em;
+        padding-top: 35px;
+    }
+}
+
 .blog-content {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1.3em;
-  padding-bottom: 1px;
-  padding-top: 10px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.3em;
+    padding-bottom: 1px;
+    padding-top: 10px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .blog-content {
+        font-size: 1em;
+        padding-top: 10px;
+    }
 }
 
 .blog-info {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 1em;
-  padding-bottom: 1px;
-  padding-top: 10px;
-}
-
-/*---------------Hiding and resizing on different screen sizes-------*/
-
- .mobileShow {
-  display: none;
- }
-
- @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-  .mobileShow {
-   display: inline;
-  }
- }
-
- .mobileHide {
-  display: inline;
- }
-
- @media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-  .mobileHide {
-   display: none;
-  }
- }
-
-.modal-header {
-    padding-bottom: 0px;
-    border-bottom: white;
-}
-
-.modal-title {
-    text-align: center;
-}
-
-html, body {
-  height: 100%;
-}
-body {
-  display: flex;
-  flex-direction: column;
-}
-.page{
-  flex: 1 0 auto;
-}
-.footer {
-  flex-shrink: 0;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1em;
+    padding-bottom: 1px;
+    padding-top: 10px;
 }
 
 /*---------------Checkout-------*/
@@ -458,12 +462,11 @@ body {
     padding-bottom: 15px;
 }
 
-
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.checkout {
-    padding-top: 55px;
-    padding-bottom: 15px;
-}}
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .checkout {
+        padding-top: 30px;
+    }
+}
 
 .checkout-title {
     color: #8a0303;
@@ -483,42 +486,24 @@ body {
     font-size: 1.3em;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .checkout-details {
+        font-size: 1em;
+    }
+}
+
 .checkout-container {
     padding-left: 50px;
     padding-right: 50px;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.checkout-container {
-    padding-left: 10px;
-    padding-right: 10px;
-}}
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .checkout-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
 
 .checkout-form {
     margin-bottom: 0px;
-}
-
-.alert {
-    margin-bottom: 0rem;
-}
-
-.stars {
-    color: #DAA520;
-    font-size: 1.3em;
-}
-
-.quote {
-    font-size: 4em;
-    color: #8a0303;
-}
-
-
-.badge-warning {
-    color: 	#DCDCDC;
-    background-color: #8a0303;
-}
-
-.modal-header {
-    text-align: center;
-    display: block;
 }

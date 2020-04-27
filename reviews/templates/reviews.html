@@ -15,7 +15,6 @@
 <div class="container">
     <div class="review-box">
         {% for review in reviews %}
-        <div class="reviews">
             <h3 class="review-title">{{ review.title }}</h3>
             
             <!-- Integers rendered as stars using if / elif-->
@@ -62,7 +61,7 @@
 
             <p class="review-by">Review written by {{ user }} on {{ review.created_date }} </p>
             <hr>
-        </div>{% endfor %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
