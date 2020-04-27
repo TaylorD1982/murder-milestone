@@ -222,9 +222,26 @@
 
 /*-------------------------Log In page-------*/
 
+.login-title {
+    font-family: 'Italianno', cursive;
+    color: #8a0303;
+    font-size: 3em;
+    padding-bottom: 20px;
+}
+
+.login-forgot {
+    font-family: 'Italianno', cursive;
+    color: #8a0303;
+    font-size: 2.2em;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+
 .login-form {
     padding-right: 155px;
     padding-left: 155px;
+    padding-top: 50px;
+    padding-bottom: 100px;
 
 }
 
@@ -232,15 +249,6 @@
 .login-form {
     padding-right: 15px;
     padding-left: 15px;
-}}
-
-.login-box {
-    padding-top: 130px;
-    padding-bottom: 100px;
-}
-
-@media only screen and (min-device-width: 0px) and (max-device-width: 1000px) {
-.login-box {
     padding-top: 50px;
     padding-bottom: 15px;
 }}
@@ -508,4 +516,9 @@ body {
 .badge-warning {
     color: 	#DCDCDC;
     background-color: #8a0303;
+}
+
+.modal-header {
+    text-align: center;
+    display: block;
 }

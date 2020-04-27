@@ -1,15 +1,25 @@
-{% extends 'base.html' %} {% block content %} {% if user.is_authenticated %}
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+<!-- A user my only post a review if they are logged into the site, otherwise the button is not displayed-->
+
+{% if user.is_authenticated %}
 <div class="post-review">
     <p><a href="{% url 'new_review' %}" class="btn btn-outline-dark">+ Write a Review</a></p>
 </div>
 {% else %} {% endif %}
 
+<!-- The code for a single review-->
 
 <div class="container">
     <div class="review-box">
         {% for review in reviews %}
         <div class="reviews">
             <h3 class="review-title">{{ review.title }}</h3>
+            
+            <!-- Integers rendered as stars using if / elif-->
+            
             {% if review.rating == 5 %}
             <div>
                 <p class="stars">
@@ -18,22 +28,36 @@
             </div>
             {% elif review.rating == 4 %}
             <div>
-                <p class="stars">★ ★ ★ ★ ☆</p>
+                <p class="stars">
+                    ★ ★ ★ ★ ☆
+                </p>
             </div>
             {% elif review.rating == 3 %}
             <div>
-                <p class="stars">★ ★ ★ ☆ ☆  </p>
+                <p class="stars">
+                    ★ ★ ★ ☆ ☆  
+                </p>
             </div>
             {% elif review.rating == 2 %}
             <div>
-                <p class="stars">★ ★ ☆ ☆ ☆</p>
+                <p class="stars">
+                    ★ ★ ☆ ☆ ☆
+                </p>
             </div>
             {% elif review.rating == 1 %}
             <div>
-                <p class="stars">★ ☆ ☆ ☆ ☆</p>
+                <p class="stars">
+                    ★ ☆ ☆ ☆ ☆
+                </p>
             </div>
             {% endif %}
+            
+            <!-- The first 30 words of the review-->
+            
             <p class="review-content">{{ review.content|truncatewords:30 }}</p>
+            
+            <!-- Button to access the full review-->
+            
             <p><a href="{% url 'review_detail' review.id %}" class="btn btn-outline-dark">Full Review</a></p>
 
             <p class="review-by">Review written by {{ user }} on {{ review.created_date }} </p>

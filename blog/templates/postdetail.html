@@ -1,11 +1,17 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} 
+
+{% block content %}
+
 <div class="container">
+    
+    <!-- Displays a full, single Blog Post -->
+    
     <div class="blog">
         <h3 class="blog-title">{{ post.title }}</h3>
         <p class="blog-content">{{ post.content }}</p>
         <p class="blog-info">Published on: {{ post.published_date }} </p>
 
-        <a href="{% url 'get_posts' %}" class="btn btn-outline-dark">Return to Blogs page</a>
+        <a href="{% url 'get_posts' %}" class="btn btn-outline-dark">Return to Blogs</a>
         <hr>
     </div>
 </div>
