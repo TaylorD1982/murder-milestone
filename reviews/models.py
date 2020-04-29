@@ -24,6 +24,7 @@ class Review(models.Model):
     
     title = models.CharField(max_length=200)
     content = models.TextField()
+    response = models.TextField(default='')
     created_date = models.DateTimeField(auto_now_add=True)
     rating = models.SmallIntegerField(choices=RATING_CHOICES)
     event = models.CharField(max_length = 20, choices = EVENT_CHOICES, default = '1'
