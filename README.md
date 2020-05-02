@@ -173,7 +173,7 @@
 
 <h3>Screens</h3>
 
-<img src="static/images/laptop.png" width="100%">
+<img src="static/images/laptop.jpg" width="100%">
 
 <h4>Larger Screens</h4>
 
@@ -208,22 +208,49 @@ Google console to inspect the running of the app for any errors.
 
 <h2>Deployment</h2>
 
-The project is deployed on Heroku. The code and Readme file are hosted on Github.
-The process for deployment on Heroku was:   
-Create a new unique app name in Heroku with “Europe” as the server.
-In the workspace, log into Heroku with command Line and the set of commands provided to create a connection between the application and Heroku.
-Create a new Git repository and add the files, then associate the Heroku application and push to Heroku once the requirements.txt file and Procfile have been created.
-Open the app to test successful deployment.
-The process for deployment on Github was:
-Create new project in Github.
-Associate the application with Github, add files and push across using commands provided within Github. 
+<p>The project is deployed on <b>Heroku</b>. The code and Readme file are hosted on <b>Github</b>.</p>
+
+<p>The process for deployment on Heroku was:</p>
+
+<ul>
+<li>Create a new unique app name in Heroku with “Europe” as the server.</li>
+<li>In the workspace, log into Heroku with command Line and the set of commands provided to create a connection between the application and Heroku.</li>
+<li>Create a new Git repository and add the files, then associate the Heroku application and push to Heroku once the requirements.txt file and Procfile have been created.</li>
+<li>In Heroku, specify the IP and port, so that the server instance will know how to run the application.</li>
+<li>IP address is 0.0.0.0</li>
+<li>Port is 5000</li>
+<li>Open the app to test successful deployment.</li>
+</ul>
+
+<p>The process for deployment on Github was:</p>
+
+<ul>
+<li>Create new project in Github.</li>
+<li>Associate the application with Github, add files and push across using commands provided within Github.</li>
+</ul>
+
+<h2>Credits</h2>
+
+<h3>Media</h3>
 
 
-Credits
+<p>The images of the creatures are from the following sites:</p>
+<ul>
+<li><a href="https://www.woodlandtrust.org.uk">www.woodlandtrust.org.uk</a></li>
+<li><a href="https://www.rspb.org.uk">www.rspb.org.uk</a></li>
+<li><a href="https://www.yorkpress.co.uk">yorkpress.co.uk</a></li>
+<li><a href="https://www.nationalgeographic.com">nationalgeographic.com</a></li>
+<li><a href="https://www.bbc.co.uk">bbc.co.uk</a></li>
+<li><a href="https://www.wikipedia.org">wikipedia.org</a></li>
+</ul>
 
-Media
-The images of the creatures are from
-The descriptions of each of the creatures was taken from Wikipedia
-Fonts from Font generator
-Acknowledgements
-I received inspiration for this project from X
+
+<p>Creature descriptions are from <a href="https://www.wikipedia.org">wikipedia.org</a></p>
+
+
+<h3>Acknowledgements</h3>
+
+<ul>
+<li>Code Institute</li>
+<li>Seun Owonikoko</li>
+</ul>
