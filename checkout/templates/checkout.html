@@ -1,37 +1,22 @@
 {% extends "base.html" %} {% load static from staticfiles %} {% load bootstrap_tags %} {% block head_js %}
+
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
 <script type="text/javascript">
     //<![CDATA[
     Stripe.publishableKey = '{{ publishable }}';
     //]]>
 </script>
+
 <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+
 {% endblock %} {% block content %}
-<div class="checkout-container">
-    {% for item in cart_items %}
-    <div class="row checkout">
-        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
-            <div>
-                <h3 class="checkout-title">Details of your purchase:</h3>
-                <br>
-                <div class="checkout-details"><b>Event:</b></div>
-                <div class="checkout-details">{{ item.product.name }}</div>
-                <br>
-                <div class="checkout-details"><b>Number of Tickets:</b></div>
-                <div class="checkout-details">{{ item.quantity }}</div>
-                <br>
-                <div class="checkout-details"><b>Price per Ticket:</b></div>
-                <div class="checkout-details">£{{ item.product.price }}</div>
-            </div>
-            {% endfor %}
-            <div>
-                <hr>
-                <div class="checkout-details"><b>Total Cost of your Order:</b></div>
-                <div class="checkout-details">£{{ total }}</div>
-            </div>
-            <hr>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+
+<div class="container">
+    <div class="review-box">
+            <text class="cart-details">Total Cost of your Order:&nbsp;&nbsp;£{{ total }}</text> 
+        <hr>
+        <div>
             <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
                 <legend class="checkout-payment">Payment Details</legend>
 
@@ -39,13 +24,13 @@
                     <div id="alert-message block-message error" id="stripe-error-message"></div>
                 </div>
                 <div class="row">
-                <div class="form-group checkout-form col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    {{ order_form | as_bootstrap }}
-                </div>
+                    <div class="form-group checkout-form col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        {{ order_form | as_bootstrap }}
+                    </div>
 
-                <div class="form-group checkout-form col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                    {{ payment_form | as_bootstrap }}
-                </div>
+                    <div class="form-group checkout-form col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        {{ payment_form | as_bootstrap }}
+                    </div>
                 </div>
 
                 {% csrf_token %}
@@ -56,5 +41,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}

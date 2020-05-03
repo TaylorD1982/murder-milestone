@@ -39,9 +39,11 @@
         {% endif %}
 
         <!-- The full review -->
-
+        
+        <p class="review-content"><b>Event Attended:</b>&nbsp;&nbsp;{{ review.event }}</p>
+        <hr>
         <p class="review-content">{{ review.content }}</p>
-        <p class="review-by">Review written by {{ user }} on {{ review.created_date }} </p>
+        <p class="review-by">Review written on {{ review.created_date }} </p>
         
         <hr> {% if review.response %}
         <p class="review-content"><b>Stiletto comment:&nbsp&nbsp&nbsp</b>{{ review.response }}</p>

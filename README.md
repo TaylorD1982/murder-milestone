@@ -11,7 +11,7 @@
 <p>The site has a simple, clean, layout with a limited colour-scheme of black, dark blue and white contrasted with ocassional splashes of crimson. Posters specific to each event provide a contract to the sections of text, as do the star ratings in the review section.</p>
 <p>The original design of the site is shown below. The final version is broadly the same although you will notice one or two changes.</p>  
 
-<img src="{% static 'images/wire.png' %}" width="100%">
+<img src="static/images/wire.png" width="100%">
 
 <h2>USER STORIES</h2>
 
@@ -177,19 +177,21 @@
 
 <h4>Larger Screens</h4>
 
-<p>The banner at the top of the page displays the company name “Stiletto Murder Mysteries” on the left hand side and on the right are shown the company's telephone number and email address, along with the social media links.</p>
-
-<p>The navigation bar displays all of the site’s pages in this view (they are not collapsed).</p>
-
-<p>The modals on the ‘Murder Mysteries” page display the events poster on the right and the event details on the right.</p> 
+<ul>
+<li>The banner at the top of the page displays the company name “Stiletto Murder Mysteries” on the left hand side and on the right are shown the company's telephone number and email address, along with the social media links.</li>
+<li>The navigation bar displays all of the site’s pages in this view (they are not collapsed).</li>
+<li>The modals on the ‘Murder Mysteries” page display the events poster on the right and the event details on the right.</li> 
+</ul>
 
 <h4>Smaller Screens</h4>
 
-<p>The navigation bar is collapsed into a ‘burger’ on smaller screens.</p>
-<p>The Telephone number, email address and social media links are hidden. 
-<p>Elsewhere, the modals on the ‘Murder Mysteries” page have the poster above the event details.</p>
-<p>On the contact page, the form is below the contact details, instead of side by side.</p> 
-<p>On the checkout page, the two sections of the payment form are above each other instead of side by side.</p> 
+<ul>
+<li>The navigation bar is collapsed into a ‘burger’ on smaller screens.</li>
+<li>The Telephone number, email address and social media links are hidden.</li> 
+<li>Elsewhere, the modals on the ‘Murder Mysteries” page have the poster above the event details.</li>
+<li>On the contact page, the form is below the contact details, instead of side by side.</li> 
+<li>On the checkout page, the two sections of the payment form are above each other instead of side by side.</li> 
+</ul>
  
 <h3>Bugs or problems encountered during testing</h3>
 
@@ -198,6 +200,7 @@
 <li>If you enter the wrong number of digits in the credit card field this causes an error.</li>
 <li>You have successfully logged in! Displays even when they have not. </li>
 <li>Reset password doesn't work. </li>
+<li>You have successfully logged in! Displays even when they have not.</li>
 </ul>
 
 <h3>Other Testing</h3>

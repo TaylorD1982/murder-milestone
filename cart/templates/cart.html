@@ -1,11 +1,15 @@
 {% extends 'base.html' %} {% load static from staticfiles %} {% load bootstrap_tags %} {% block content %}
 <div class="container">
     <div class="cart">
+
+        {% if cart_items %}
+        <h3 class="cart-title">Your basket:</h3>
+        <br>
+        {% else %}
+        {% endif %}
         {% if cart_items %} {% for item in cart_items %}
         <div>
             <div>
-                <h3 class="cart-title">Details of your purchase:</h3>
-
                 <div class="cart-details"><b>Event:</b></div>
                 <div class="cart-details">{{ item.product.name }}</div>
                 <br>
@@ -28,6 +32,17 @@
                     </div>
                     <button type="submit" class="btn btn-outline-dark"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend Quantity</button>
                 </form>
+                <br>
+                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                    <div class="cart-remove">Remove this event from the cart</div>
+                    {% csrf_token %}
+                    <div class="form-group inputHide">
+                        <div class="input-group inputHide">
+                            <input name="quantity" type="number" class="form-control" value="0">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Delete</button>
+                </form>
                 <hr>
             </div>
         </div>
@@ -43,8 +58,9 @@
 {% if cart_items %}
 <div class="container">
     <div class="cart-details"><b>Total Cost of your Order:</b></div>
-    <div class="cart-details">£{{ total }}</div>
     <br>
-    <a href="{% url 'checkout' %}" class="btn btn-outline-dark" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+    <div class="cart-details">
+        £{{ total }} <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+    </div>
     <br>
 </div><br> {% else %} {% endif %} {% endblock %}
