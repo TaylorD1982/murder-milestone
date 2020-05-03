@@ -205,6 +205,11 @@
 
 <h3>Other Testing</h3>
 
+<p>App was tested using <a href="https://travis-ci.org/github/TaylorD1982/murder-milestone">Travis Continuous Integration</a></p>
+
+<img src="static/images/travis.png" width="100%">
+
+
 HTML test to review the code for any errors
 Google console to inspect the running of the app for any errors.  
 
@@ -217,12 +222,12 @@ Google console to inspect the running of the app for any errors.
 
 <ul>
 <li>Create a new unique app name in Heroku with “Europe” as the server.</li>
-<li>In the workspace, log into Heroku with command Line and the set of commands provided to create a connection between the application and Heroku.</li>
-<li>Create a new Git repository and add the files, then associate the Heroku application and push to Heroku once the requirements.txt file and Procfile have been created.</li>
-<li>In Heroku, specify the IP and port, so that the server instance will know how to run the application.</li>
-<li>IP address is 0.0.0.0</li>
-<li>Port is 5000</li>
-<li>Open the app to test successful deployment.</li>
+<li>In Heroku, go to settings and Config Vars and add in the DATABASE_URL, Django Secret Key and Stripe Secret Keys. Static file uploads also disabled here</li>
+<li>In Heroku, go to Deploy, click on Github and search for the Repo</li>
+<li>In Cloud 9, install Gunicorn and add this to the requirements.txt file in order to connect to Heroku</li>
+<li>Create a Procfile to tell Heroku what the app type will be</li>
+<li>Update settings.py file to allow the site's Heokru url as an allowed host</li>
+<li>push code to Github and then deploy the branch in Heroku</li>
 </ul>
 
 <p>The process for deployment on Github was:</p>
@@ -236,20 +241,14 @@ Google console to inspect the running of the app for any errors.
 
 <h3>Media</h3>
 
-
-<p>The images of the creatures are from the following sites:</p>
+<p>The images used as the basis for the event posters were found at:</p>
 <ul>
-<li><a href="https://www.woodlandtrust.org.uk">www.woodlandtrust.org.uk</a></li>
-<li><a href="https://www.rspb.org.uk">www.rspb.org.uk</a></li>
-<li><a href="https://www.yorkpress.co.uk">yorkpress.co.uk</a></li>
-<li><a href="https://www.nationalgeographic.com">nationalgeographic.com</a></li>
-<li><a href="https://www.bbc.co.uk">bbc.co.uk</a></li>
-<li><a href="https://www.wikipedia.org">wikipedia.org</a></li>
+<li><a href="https://www.clipdealer.com">www.clipdealer.com</a></li>
+<li><a href="https://www.iheart.com">www.iheart.com</a></li>
+<li><a href="https://www.pinterest.co.uk/amnakhanengr90/graphicsillustrations">www.pinterest.co.uk/amnakhanengr90</a></li> 
+<li><a href="https://www.barewalls.com/posters-art-prints/antique-clock.html">www.barewalls.com/posters-art-prints/antique-clock.html</a></li>
+<li><a href="http://www.2yamaha.com/music/Oldtime+Posters.html">www.2yamaha.com/music/Oldtime+Posters.html</a></li>
 </ul>
-
-
-<p>Creature descriptions are from <a href="https://www.wikipedia.org">wikipedia.org</a></p>
-
 
 <h3>Acknowledgements</h3>
 
