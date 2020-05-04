@@ -4,17 +4,19 @@
     <br> {% for product in products %}
     <div class="row products">
 
-        <!-- The poster for the event will be shown below -->
+        <!-- Event Poster -->
 
         <div class="col-sm-12 col-md-5 col-lg-4 col-xl-3 product-image">
             <img width="100%" src="{{ MEDIA_URL }}{{ product.image }}" alt="Stiletto Murder Mysteries">
         </div>
 
-        <!-- The name of the event and the beginning of the description are below -->
+        <!-- Name of the event and truncated description -->
 
         <div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">
             <h3 class="product-name mobileHide">{{ product.name }}</h3>
             <p class="product-description">{{ product.description|truncatewords:40 }}</p>
+
+            <!-- Button to open modal -->
 
             <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modal{{product.id}}">
               Full Scenario

@@ -2,7 +2,7 @@
 
 {% block content %} 
 
-<!-- A user my only post a review if they are logged into the site, otherwise the button is not displayed-->
+<!-- A user may only post a review if they are logged into the site, otherwise the button is not displayed-->
 
 {% if user.is_authenticated %}
 <div class="post-review">
@@ -62,7 +62,7 @@
             
             <p><a href="{% url 'review_detail' review.id %}" class="btn btn-outline-dark">Full Review</a></p>
 
-            <p class="review-by">Review written by {{ user }} on {{ review.created_date }} </p>
+            <p class="review-by">Review written on {{ review.created_date }} </p>
             <hr>
         {% endfor %}
     </div>

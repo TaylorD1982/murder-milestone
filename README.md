@@ -2,33 +2,36 @@
 
 <h1>Stiletto Murder Mysteries</h1>
 
-<p>Stiletto Murder Mysteries is a company of actors and storytellers who organise Murder Mystery evenings throughout Scotland. The company has devised a number of scenarios, which they stage in hotels and castles accross the country with the participation of paying guests.</p>
+<p>Stiletto Murder Mysteries is a company of actors and storytellers who organise Murder Mystery evenings throughout Scotland. The company has devised a number of scenarios, which they stage in hotels and castles across the country with the participation of paying guests.</p>
 
-<p>The purpose of this website is to allow prospective guests to view details of events, read & post reviews, check out the latest news and book tickets to the evening of their choice.  Vistitors to the site may also contact the company directly.</p> 
+<p>The purpose of this website is to allow prospective guests to view details of events, read & post reviews, check out the latest news and book tickets to the murder mystery evening of their choice. Visitors to the site may also contact the company directly.</p> 
 
 <h2>UX</h2>
 
-<p>The site has a simple, clean, layout with a limited colour-scheme of black, dark blue and white contrasted with ocassional splashes of crimson. Posters specific to each event provide a contract to the sections of text, as do the star ratings in the review section.</p>
+<p>The site has a simple, clean, layout with a limited colour-scheme of black, dark blue and white contrasted with occasional splashes of crimson. Posters specific to each event provide a contract to the sections of text, as do the star ratings in the review section.</p>
 <p>The original design of the site is shown below. The final version is broadly the same although you will notice one or two changes.</p>  
 
-<img src="static/images/wire.png" width="100%">
+<img src="static/images/wire.png" width="90%">
 
 <h2>USER STORIES</h2>
 
-<h5>Below are a number of scenarios, which demonstrate how a visitor would navigate through the site.</h5>  
+<p>Below are a number of scenarios, which demonstrate how a visitor would navigate through the site.</p>  
 
 <ol>
-<li><p><b>David</b> visits the site and decides to find out what others thought of Stiletto Murder Mysteries. He navigates to the reivews section and sees that the top review was positive, giving the evening a 4-star rating. He clicks on the 'Full Review' button and is taken to another page showing the feedback in its entirety.</p></li> 
+<li><p><b>David</b> visits the site and decides to find out what others thought of Stiletto Murder Mysteries. He navigates to the reviews section and sees that the top review was positive, giving the evening a 4-star rating. He clicks on the 'Full Review' button and is taken to another page showing the feedback in its entirety. He returns to the reviews page and reads a second, less positive review. Below the feedback, the administrator has posted a response to the review, which refutes the feedback and states that they believed the evening to have been a success.</p></li> 
 
-<li><p><b>Emma</b> lives in Glasgow and is looking for an event in her city. She goes to the 'Murder Mysteries' page on the site and scrolls down to find a party in that location. The event 'The Hunting Party' is being held in a hotel close to her next month and she decides this would be perfect, so she clicks on the 'Register' button in the Navigation Bar. Once she has registered, she returns to the 'Murder Mysteries' page and adds 3 tickets to her cart. She checks that the details are correct ands then proceeds to the checkout, were she enters her payment details and books the 3 tickets for her event.</p></li> 
+<li><p><b>Emma</b> lives in Glasgow and is looking for an event in her city. She goes to the 'Murder Mysteries' page on the site and scrolls down to find a party in that location. The event 'The Hunting Party' is being held in a hotel close to her next month and she decides this would be perfect, so she clicks on the 'Register' button in the Navigation Bar. Once she has registered, she returns to the 'Murder Mysteries' page and adds 3 tickets to her cart. She checks that the details are correct and then proceeds to the checkout, were she enters her payment details and books the tickets.</p></li> 
 
 <li><p><b>Colin</b> attended an event “A Time to Kill” with a friend who had bought the tickets. Colin thought the production was a waste of money and would like to post a review warning others not to attend. He visits the site and navigates to the reviews page but discovers that he cannot post a review unless he is registered and logged into the site. He decides that he would prefer not to do so and leaves.</p></li> 
 
-<li><p><b>Susan</b> has been asked to organise a murder mystery event as part of a team building exercise through work. The event must be private though, so simply purchasing tickets to a public event is not agreeable. She navigates to the “Contact” page on the site and completes the Contact Form, sending a query to the company detailing her requirements.</p></li>
+<li><p><b>Susan</b> has been asked to organise a murder mystery event as part of a team building exercise through work. The event must be private though, so simply purchasing tickets to a public event is not agreeable. She navigates to the “Contact” page on the site and completes the Contact Form, sending a query to the company detailing her requirements. She receives a message confirming that the query was successfully sent.</p></li>
 
-<li><p><b>Nick</b> selects an event for himself and 5 friends to attend in Edinburgh next month. He is already logged in so he navigates to the cart and reviews his order. At this point, he realises that he forgot to get a ticket for himself, so he amend his order to 6 and then proceeds to the checkout, where he pays.</p></li> 
+<li><p><b>Nick</b> selects an event for himself and 5 friends to attend in Edinburgh next month. He is already logged in so he navigates to the cart and reviews his order. At this point, he realises that he forgot to get a ticket for himself, so he amend his order to 6 and then proceeds to the checkout.</p></li> 
 
-<li><p><b>Florence</b> is one of the principal actors with the Stiletto Murder Mysteries company. It is her job to update the news section of the site. She logs in to the 'admin' section of the site and clicks to add a post to the 'Blog' section. Here she adds a title of the post, some content and clicks to publish the company's latest update.</p></li>
+<li><p><b>Florence</b> is one of the principal actors with the Stiletto Murder Mysteries company. It is her job to update the news section of the site. She logs in to the 'admin' section of the site and clicks to add a post to the 'Blog' section. Here she adds a title of the post, some content and clicks to publish the company's latest news.</p></li>
+
+<li><p><b>Wilfred</b> is responsible for organising events for the company. He has just booked a castle in Sterling for an event in September. He logs into the admin section of the site and adds a new product. Wilfred enters all of the necessary information and saves his updates. Back on the live site, the event has been added, and is at the foot of the page as events are arranged in date order.</p></li>
+
 </ol>
 
 
@@ -45,22 +48,21 @@
 <li><b>Feature 5 (Write a Review)</b> – If a visitor is logged into the site, they have the option of posting a new review in the reviews page and assigning a star rating. This option is removed when the visitor is not logged in.</li> 
 <li><b>Feature 6 (Read reviews)</b> – All visitors to the site can read the reviews posted in the reviews section. They can click on Full Review to view the entire post.</li> 
 <li><b>Feature 7 (Review Response)</b> – The site's administrator has the option of posting a response to any review via the admin panel.</li> 
-<li><b>Feature 8 (Search box)</b> – The search box allows visitors to search the site for product names matching certin keywords.</li> 
+<li><b>Feature 8 (Search box)</b> - search box allows visitors to search the site for product names matching certain keywords.</li> 
 <li><b>Feature 9 (Register)</b> – Users must be registered in order to post reviews and purchase tickets to events. The register mechanism allows them to do so by confirming their email address and inputting a Username and Password.</li> 
 <li><b>Feature 10 (Cart)</b> – Amend the quantity of tickets and remove the entire event from cart.</li> 
 <li><b>Feature 11 (Social Media Links)</b> – Visitors can be directed to the companies social media accounts via icons on the banner and contact page.</li> 
-<li><b>Feature 12 (reset password)</b> – Vistors can reset their password if they have forgotten this.</li>
+<li><b>Feature 12 (reset password)</b> – Visitors can reset their password if they have forgotten this.</li>
 </ul> 
 
 <h3>Features Left to Implement</h3>
 
 <ul>
-<li>Inclusion of an average review score against each event in the 'Murder Mysteries' page.</li> 
-<li>Post reviewers name against their review.</li>
-<li>Search for key words in the event description.</li>
-<li>Back button from the search page.</li>
+<li>The addition of an average review score against each event in the 'Murder Mysteries' page.</li> 
+<li>The name of the reviewer is shown at the foot of each review.</li>
+<li>Search for key words in the event details (location, for example) instead of just in the name of the event.</li>
+<li>The inclusion of a Back button from the search results page.</li>
 </ul>
-
 
 <h2>Technologies Used</h2>
 
@@ -82,13 +84,13 @@
 
 <h2>Testing</h2>
 
-<h5>Below is a series of practical tests of the website's functionality</h5>
+<p>Below is a series of practical tests of the website's functionality</p>
 
 <h3>Navigation Bar</h3>
 
 <ul>
 <li>User clicks on the each of the navigation bar items and is correctly taken to that page.</li> 
-<li>When the user is logged out, the icons “Register” and “Log In” are displayed. When the user is logged in, the icon “Log Out is dsiplayed instead”</li>
+<li>When the user is logged out, the icons “Register” and “Log In” are displayed. When the user is logged in, the icon “Log Out is displayed instead”</li>
 <li>In mobile view, the navigation bar shrinks to a burger image. When clicked on, the navigation items are displayed in a Nav bar that drops down from below the site's banner.</li>
 </ul>
 
@@ -96,7 +98,7 @@
 
 <ul>
 <li>The upcoming events are displayed in date order, from soonest to latest. Clicking on the “Full Scenario” button displays a modal with a full description of the scenario for that particular mystery.</li>
-<li>User clicks “Add” without entering a number into the “Tickets” field and recieves  a “Please fill in this field” message.</li>
+<li>User clicks “Add” without entering a number into the “Tickets” field and receives a “Please fill in this field” message.</li>
 <li>Users enters a figure into the “Tickets” field and clicks “Add”. This adds that order to the cart, which displays the number of tickets in the Navigation Bar.</li>
 </ul>
 
@@ -142,7 +144,7 @@
 <ul>
 <li>User enters their email address and password, clicks on “Login” and is logged into the site.</li> 
 <li>User enters incorrect password and receives message saying “Your username or password is incorrect”. User enters incorrect username and receives message saying “Your username or password is incorrect”. </li>
-<li>User fails to enter complete both fields and recieves a message stating “Please fill in this field”.</li>
+<li>User fails to enter complete both fields and recieves a message stating "Please fill in this field”.</li>
 <li>User clicks “Reset Password” and is taken to the password-reset page, where they can enter their email address in the field provided. Clicking the “Reset Password” button without completing this field displays a message stating “Please fill in this field”.</li>
 <li>User enters an email address and clicks “Reset Password” and receives a 'done' message.</li>
 <li>User clicks “Log Out” in the navigation bar. User is logged out, redirected to the home page, and receives a message stating “You have successfully been logged out”.</li>
@@ -155,7 +157,7 @@
 <li>User adds one event ticket to the cart and visits the Cart page. User is shown details of their purchase including the name of the event, event details, price per ticket, number of tickets in cart and the total cost of the order. </li>
 <li>User has the option to amend the number of tickets in the order. User changes number of tickets from 1 to 2 and clicks “Amend Quantity”. Number of tickets and total cost of order both update.</li>
 <li>User wishes to remove this event from their cart. User clicks on the “Delete” button, all tickets are removed and page will display 1. “Your basket is empty”.</li>
-<li>User adds 1 ticket from the event “A Time To Kill” and one ticket from the event “The Casino Killing” to their basket. They navigate to the cart. Details of the first event are shown above those of the second. The total cost of the order is displayed correctly at the fot of the page.</li>
+<li>User adds 1 ticket from the event “A Time To Kill” and one ticket from the event “The Casino Killing” to their basket. They navigate to the cart. Details of the first event are shown above those of the second. The total cost of the order is displayed correctly at the foot of the page.</li>
 <li>User amends the number of tickets for “A Time To Kill” from 1 to 2 and clicks “Amend Quantity”. Number of tickets for this event and total cost of the order both update correctly.</li>
 <li>User deletes both tickets for “A Time To Kill” from their basket. This event is completely removed from the cart, leaving only the event “The Casino Killing”.</li>
 </ul>
@@ -165,13 +167,13 @@
 <ul>
 <li>From the Cart page, User clicks “Checkout” and is taken to the checkout page.</li> 
 <li>The total cost of the order is correctly displayed at the top of the page. </li>
-<li>A form is displyed below allowing the user to input their payment details. User clicks on the button “Submit Payment” without completing every field and receives the message “Please fill in this field”.</li>
+<li>A form is displayed below allowing the user to input their payment details. User clicks on the button “Submit Payment” without completing every field and receives the message “Please fill in this field”.</li>
 <li>User correctly completes the form and clicks “Submit Payment”. User is returned to the “Murder Mysteries” page and receives a message stating “You have successfully paid”.</li>
 <li>User enters out of date credit card. User cannot click pay button.</li>
 <li>BUG</li>
 </ul>
 
-<h3>Screens</h3>
+<h3>Screen size responsiveness</h3>
 
 <img src="static/images/laptop.jpg" width="100%">
 
@@ -201,11 +203,13 @@
 <li>You have successfully logged in! Displays even when they have not. </li>
 <li>Reset password doesn't work. </li>
 <li>You have successfully logged in! Displays even when they have not.</li>
+<li>The contact form was not working. This was resolved by reestablishing the connection between Email JS and GMail.</li>
+<li>In the events page, it was possible to click 'Add' when the number of tickets had not been entered. This created and error and was solved by making the number of tickets a required field.</li>
 </ul>
 
 <h3>Other Testing</h3>
 
-<p>App was tested using <a href="https://travis-ci.org/github/TaylorD1982/murder-milestone">Travis Continuous Integration</a></p>
+<p>The app was tested using <a href="https://travis-ci.org/github/TaylorD1982/murder-milestone">Travis Continuous Integration</a></p>
 
 <img src="static/images/travis.png" width="100%">
 

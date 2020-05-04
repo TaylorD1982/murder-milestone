@@ -13,8 +13,8 @@
 {% endblock %} {% block content %}
 
 <div class="container">
-    <div class="review-box">
-            <text class="cart-details">Total Cost of your Order:&nbsp;&nbsp;£{{ total }}</text> 
+    <div class="checkout">
+            <text class="checkout-details">The total cost of your order is&nbsp;&nbsp;<b>£{{ total }}</b></text> 
         <hr>
         <div>
             <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
@@ -34,8 +34,8 @@
                 </div>
 
                 {% csrf_token %}
-                <div class="form-group col-md-12">
-                    <input class="btn btn-outline-dark" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+                <div class="form-group">
+                    <input class="btn btn-success" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment" style="margin-left:0">
                 </div>
             </form>
         </div>

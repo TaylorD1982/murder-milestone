@@ -5,9 +5,14 @@
 {% block content %}
 
 <div class="container">
+    
+    <!-- Button to go to Login page -->
+    
     <div class="login-form"></p>
         <p>Already have an account?&nbsp&nbsp&nbsp&nbsp<a href="{% url 'login' %}" class="btn btn-outline-dark">Sign In</a></p>
         <hr>
+        
+        <!-- User registers via Bootstrap Form -->
         
         <form method="POST">
             {% csrf_token %} {{ registration_form | as_bootstrap }}
