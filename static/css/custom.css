@@ -458,7 +458,7 @@ body {
 
 .review-by {
     font-family: 'Nanum Myeongjo', serif;
-    font-size: 1em;
+    font-size: 0.75em;
     padding-bottom: 1px;
     padding-top: 10px;
 }
@@ -547,3 +547,42 @@ body {
 .checkout-form {
     margin-bottom: 0px;
 }
+
+/*-------------PHOTOS--------*/
+
+.photo-heading {
+    font-family: 'Italianno', cursive;
+    color: #8a0303;
+    font-size: 3em;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .photo-heading {
+        font-size: 2em;
+    }
+}
+
+.photo-description {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.5em;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 1100px) {
+    .photo-description {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 600px) {
+    .photo-image{
+        padding-bottom: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (max-device-width: 1100px) and (min-device-width: 601px){
+    .photo-image {
+        padding-left: 0px;
+        padding-right: 0px;
+}}

@@ -11,7 +11,7 @@
 <p>The site has a simple, clean, layout with a limited colour-scheme of black, dark blue and white contrasted with occasional splashes of crimson. Posters specific to each event provide a contract to the sections of text, as do the star ratings in the review section.</p>
 <p>The original design of the site is shown below. The final version is broadly the same although you will notice one or two changes.</p>  
 
-<img src="static/images/wire.png" width="90%">
+<img src="static/images/wire.png" width="90%" text-align="center">
 
 <h2>USER STORIES</h2>
 
