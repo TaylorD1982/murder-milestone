@@ -62,11 +62,11 @@
                     <b>Address:</b> {{ product.address }}</p>
                 </div>
             </div>
-            
+
             <p><b>Price per Person:</b> £{{ product.price }}</p>
-            
+
             <!-- Form to add the specified number of tickets to the cart -->
-            
+
             <form method="post" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
                 <div class="input-group" style="width: 200px;">

@@ -13,7 +13,6 @@ def index(request):
 def logout(request):
     """Log the user out"""
     auth.logout(request)
-    messages.success(request, "You have successfully been logged out")
     return redirect(reverse('index'))
 
 
@@ -27,7 +26,6 @@ def login(request):
         if login_form.is_valid():
             user = auth.authenticate(username=request.POST['username'],
                                     password=request.POST['password'])
-            messages.success(request, "You have successfully logged in!")
 
             if user:
                 auth.login(user=user, request=request)

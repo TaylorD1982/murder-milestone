@@ -3,6 +3,9 @@
     <div class="cart">
 
         {% if cart_items %}
+        
+        <!-- Only displayed if the cart has an item in it -->
+        
         <h3 class="cart-title">Your basket:</h3>
         <br>
         {% else %}
@@ -47,6 +50,9 @@
             </div>
         </div>
         {% endfor %} {% else %}
+        
+        <!-- Displays the following message if cart is empty -->
+        
         <div class="container">
             <h1 class="cart-title">Your basket is empty</h1>
             <p class="cart-details">Visit the Murder Mysteries page to view our upcoming events</p>

@@ -586,3 +586,14 @@ body {
         padding-left: 0px;
         padding-right: 0px;
 }}
+
+
+/*-------------README STYLING--------*/
+
+.bug-fail {
+    color: red;
+}
+
+.bug-fix {
+    color: green;
+}
